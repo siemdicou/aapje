@@ -16,7 +16,7 @@ public class PhpTest : MonoBehaviour {
 		yield return download;
 		//Debug.Log(download.error);
 		Debug.Log("Here it comes" + download.text);
-		
+
 		string[] values = download.text.Split(new char[] {'\n'});
 		
 		foreach (string value in values)
