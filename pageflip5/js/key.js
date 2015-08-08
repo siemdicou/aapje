@@ -1,0 +1,1 @@
+﻿var Key = { Copyright: "© 2014 Pageflip5 offline test copy", Key: "Xz0S5M0HZfNntx136RmbIEf"};
