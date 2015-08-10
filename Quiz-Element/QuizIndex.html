@@ -2,22 +2,32 @@
 <html>
 <head>
 	<title>Quiz</title>
+	<script type="text/javascript" src="Structs.js"></script>
+	<script type="text/javascript" src="Main.js"></script>
+	<script type="text/javascript" src="PersonalInformation.js"></script>
 	<script type="text/javascript" src="Quiz.js"></script>
 	<link href="Quiz.css" rel="stylesheet" type="text/css">
 	<meta charset="UTF-8">
 
 </head>
 <body>
-<img src="Images/Jayce.png" height="100px">
+<div id="PersonalInformation">
+	<img src="Images/Jayce.png" height="100px">
+	<div id="PersonalName"></div>
+	<div id="PersonalScore"></div>
+	<div id="PersonalCurrentScore"></div>
+
+</div>
+
 <div id="questionBox" height="200px">
 	<div id="Question"></div>
 </div>
-<div id="answerBox">
-	<div id="AnswerA" onclick="Answered(A)"></div>
-	<div id="AnswerB" onclick="Answered(B)"></div>
-	<div id="AnswerC" onclick="Answered(C)"></div>
-	<div id="AnswerD" onclick="Answered(D)"></div>
 
+<div id="answerBox">
+	<div id="A" onclick="Answered(A)"></div>
+	<div id="B" onclick="Answered(B)"></div>
+	<div id="C" onclick="Answered(C)"></div>
+	<div id="D" onclick="Answered(D)"></div>
 </div>
 
 </body>
