@@ -720,23 +720,59 @@ div#demo2-page11 a {
 div#demo2-page11 a:hover {
 	text-decoration: underline;
 }
-.fotos{
+div#pictures{
 	border: 2px solid black;
-	width: 35%;
+	width: 30%;
+	height: auto;
 	margin: 3%;
+	/*height: 33%;*/
+	/*max-height: 100%;*/
+	/*width: 100%;*/
+	background-image: url(http://www.024.fm/media/250x275/3170-ROODZWARTGROEN_promoteam_eredivisiebal.jpg);
+	background-attachment:absolute;
+	text-align: center;
 }
-.fotos:hover{
+/*img{
+	width: 100%;
+}*/
+
+/*.fotos:hover{
 	border: 2px solid black;
 	width: 35%;
 	margin: 3%;
 	background-image: url(http://www.beijen.net/frank/club/fnec2000.jpg);
 	opacity: 0.05;
-}
+}*/
 .plaatjes{
 	visibility: hidden;
 }
 .plaatjes:active{
 	visibility: visible;
 }
-button{
+.btn{	
+  background: #35bd64;
+  background-image: -webkit-linear-gradient(top, #35bd64, #2bb847);
+  background-image: -moz-linear-gradient(top, #35bd64, #2bb847);
+  background-image: -ms-linear-gradient(top, #35bd64, #2bb847);
+  background-image: -o-linear-gradient(top, #35bd64, #2bb847);
+  background-image: linear-gradient(to bottom, #35bd64, #2bb847);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #e6f0e4;
+  font-size: 22px;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
