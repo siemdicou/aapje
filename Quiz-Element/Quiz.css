@@ -2,3 +2,10 @@
 	background-color: #FF0;
 
 }
+
+#A, #B, #C, #D{
+	max-height:150px 	 ;
+	max-width:200px;
+	padding:50px 50px 50px 50px;
+	background-image:url(Images/flag.png);	
+}

@@ -75,3 +75,7 @@ function Answered(chosenAnswer){
 	NextQuestion();
 }
 
+function NoQuestionsLeft(){
+	
+}
+
