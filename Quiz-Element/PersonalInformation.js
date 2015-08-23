@@ -30,3 +30,4 @@ function RemovePoints(LostAmount){
 	thisPlayer.Score -= (parseInt(LostAmount));
 
 }
+

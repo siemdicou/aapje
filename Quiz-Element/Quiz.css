@@ -2,10 +2,15 @@
 	background-color: #FF0;
 
 }
-
+#answerBox{
+	margin:0 0 0 25%;
+}
 #A, #B, #C, #D{
 	max-height:150px 	 ;
 	max-width:200px;
 	padding:50px 50px 50px 50px;
 	background-image:url(Images/flag.png);	
+}
+#A:hover, #B:hover, #C:hover, #D:hover{
+	background-image:url(Images/flagHover.png);	
 }

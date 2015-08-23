@@ -1,6 +1,8 @@
 var A,B,C,D, Q;
+var QuizDiv;
 var rightAnswer;
 var chosenQuestions = [];
+var tempScore;
 
 
 var QAarray = [
@@ -34,6 +36,8 @@ function NextQuestion(){
 		chosenQuestions.push(RandomQuestionNmbr);
 	}else if(chosenQuestions.length >= 5){
 		//Bonus Question?
+		NoQuestionsLeft();
+		
 
 	}else{
 		//Choose a random number, Only use it if you 
@@ -68,14 +72,15 @@ function InsertQuestion(QuestionNumber){
 //Answered? is it the right Then we gain points and continue to the next question
 function Answered(chosenAnswer){
 	if(chosenAnswer.id.toString() == rightAnswer){
-		AddPoints(2);
+		tempScore += 1;
 	}else{
-		RemovePoints(2);
+		tempScore -= 1;
 	}
 	NextQuestion();
 }
 
 function NoQuestionsLeft(){
-	
+	QuizDiv= g("quizDiv");
+	QuizDiv.style.display = "none";
 }
 
