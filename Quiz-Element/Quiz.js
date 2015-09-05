@@ -60,12 +60,12 @@ function NextQuestion(){
 //Visual Adding of the Question and Answers to HTML
 function InsertQuestion(QuestionNumber){
 
-	rightAnswer  = QAarray[QuestionNumber].GoodAnswer;
-	Q.innerHTML  = QAarray[QuestionNumber].Question;
-	A.innerHTML  = QAarray[QuestionNumber].AnswerA;
-	B.innerHTML  = QAarray[QuestionNumber].AnswerB;
-	C.innerHTML  = QAarray[QuestionNumber].AnswerC;
-	D.innerHTML  = QAarray[QuestionNumber].AnswerD;
+	rightAnswer      = QAarray[QuestionNumber].GoodAnswer;
+	Q.innerHTML     = QAarray[QuestionNumber].Question;
+	A.innerHTML     = QAarray[QuestionNumber].AnswerA;
+	B.innerHTML     = QAarray[QuestionNumber].AnswerB;
+	C.innerHTML     = QAarray[QuestionNumber].AnswerC;
+	D.innerHTML     = QAarray[QuestionNumber].AnswerD;
 
 }
 
