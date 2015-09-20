@@ -1,0 +1,40 @@
+html body{
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+#wrapper{
+	width: 60%;
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-top: 5%;
+	background-color: red;
+	padding: 2%;
+}
+img {
+	width: 40%;
+
+}
+.buttons {
+	/*padding: 1%;*/
+	float: right;
+	width: 0 auto;
+
+
+
+
+}
+.buttons h1{
+	/*padding: 1%;*/
+	background-color:purple;
+	/*float: right;*/
+	border:3px solid;
+	padding-left: 8%;
+	padding-right: 8%;
+	margin-right:-15%; 
+
+
+
+
+}

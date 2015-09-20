@@ -723,13 +723,16 @@ div#demo2-page11 a:hover {
 div#pictures{
 	border: 2px solid black;
 	width: 30%;
-	height: auto;
+	height: 100%;		
 	margin: 3%;
+	padding: 25%;
+	/*background-repeat: no-repeat;*/
 	/*height: 33%;*/
 	/*max-height: 100%;*/
 	/*width: 100%;*/
 	background-image: url(http://www.024.fm/media/250x275/3170-ROODZWARTGROEN_promoteam_eredivisiebal.jpg);
-	background-attachment:absolute;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
 	text-align: center;
 }
 /*img{
