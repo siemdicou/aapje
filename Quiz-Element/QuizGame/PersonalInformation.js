@@ -88,7 +88,7 @@ function HidePersonia() {
     PersonalSpot.style.top = (window.innerHeight - 50).toString() + "px";
 }
 function ShowPersonia() {
-    PersonalSpot.style.top = (window.innerHeight -500).toString() + "px";
+    PersonalSpot.style.top = (window.innerHeight -180).toString() + "px";
 
 }
 
