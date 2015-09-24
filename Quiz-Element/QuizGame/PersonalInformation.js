@@ -67,7 +67,7 @@ function CreateDiv(divName, value, Parent, r) {
 }
 
 function CreateImage(divName, ImagePath, targetDiv) {
-    var r = document.createElement("img");
+    r = document.createElement("img");
     r.setAttribute("id", divName);
     r.setAttribute("alt", divName);
     r.src = ImagePath;
@@ -85,10 +85,13 @@ function ModifyStyle(targetDiv, targetMethod) {
 }
 
 function HidePersonia() {
-    PersonalSpot.style.top = (window.innerHeight - 50).toString() + "px";
+    Tabsize = document.body.parentNode.clientHeight;
+    PersonalSpot.style.top = (Tabsize - 50).toString() + "px";
 }
 function ShowPersonia() {
-    PersonalSpot.style.top = (window.innerHeight -180).toString() + "px";
+    Tabsize = document.body.parentNode.clientHeight;
+    PersonalSpot.style.top = (Tabsize - 180).toString() + "px";
+   // PersonalSpot.style.top = (window.innerHeight - 180).toString() + "px";
 
 }
 

@@ -2,33 +2,23 @@
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="css/milkbox/milkbox.css" />
-
-    <style type="text/css" title="text/css">
-        #test {
-            width: 15px;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="Pop-up.css" />
 
 
-    <script src="js/mootools-core.js"></script>
-    <script src="js/mootools-more.js"></script>
-    <script src="js/milkbox-yc.js"></script>
+
+    <script src="Pop-Up.js" type="text/javascript"></script>
 
 
 	<meta charset="utf-8" />
 </head>
 <body>
-    <div id="box"> 
-        <table id="gallery">
-            <tr>
-                <td><a href="QuizGame/QuizIndex.html" data-milkbox="milkbox:g1" data-milkbox-size="width:1280,height:720"><img src="img/01.png" alt="" width="100" height="100" /></a></td>
-
-
-            </tr>
-        </table>
+    <div id="blanket" style="display:none;"></div>
+    <div id="popUpDiv" style="display:none;">
+        <a onclick="popup('popUpDiv')" id="closeLink">Click to Close CSS Pop Up</a>
+        <iframe src="QuizGame/QuizIndex.html"   width="1280px" height="720px"></iframe>
     </div>
+
+            <a onclick="popup('popUpDiv')" ><img src="QuizGame/Images/Player1.png" alt="" width="100px" height="10px" /></a>
 
 </body>
 </html>

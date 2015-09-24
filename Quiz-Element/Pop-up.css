@@ -1,0 +1,19 @@
+﻿#blanket {
+   background-color:rgba(128, 128, 128, 0.1);
+   *background:none;
+   position:absolute;
+   z-index: 9001;
+   top:0px;
+   left:0px;
+   width:100%;
+}
+
+#popUpDiv {
+	position:absolute;
+	background:yellow;
+	width:1280px;
+	height:720px;
+	border:5px solid #000;
+	z-index: 9002;
+    overflow:hidden;
+}
