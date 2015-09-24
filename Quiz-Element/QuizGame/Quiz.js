@@ -1,13 +1,13 @@
-var A,B,C,D, Q;
+var A,B,C,D, Q, S;
 var QuizDiv;
 var rightAnswer;
 var chosenQuestions = [];
-var tempScore;
+var tempScore = 0;
 
 
 var QAarray = [
-	new QA(0,3,"You think you got this?","A", "YEAH.png","Jayce.png","YAhoo.png"),
-	new QA(1,4,"Bring me to life?","A", "Yesh.png","No.png","Que.png","Yatta.png"),
+	new QA(0,3,"You think you got this?","A", "I do...","No I don't","Potatoe"),
+	new QA(1,4,"Bring me to life?","B", "K?","Wake me up!","Bring me lives","Gimme something to work with"),
 	new QA(2,3,"Atleast I Hope","A", "YEAH.png","Jayce.png","YAhoo.png"),
 	new QA(3,4,"this is four","A", "Jayce.png","Maybe.png","Que.png","Yatta.png"),
 	new QA(2,3,"Eat shit","A", "YEAH.png","Jayce.png","YAhoo.png"),
@@ -17,13 +17,15 @@ var QAarray = [
 	new QA(4,3,"Welp","A", "a.png","Jayce.png","YAhoo.png"),];
 
 
-
+//Get all the Quiz-Element Out of the HTML
 function QuizInit(){
 	Q = g("Question");
 	A = g("A");
 	B = g("B");
 	C = g("C");
 	D = g("D");
+	S = g("currentScore");
+	ShowPersonia();
 	NextQuestion();	
 	
 
@@ -60,6 +62,7 @@ function NextQuestion(){
 //Visual Adding of the Question and Answers to HTML
 function InsertQuestion(QuestionNumber){
 
+
 	rightAnswer      = QAarray[QuestionNumber].GoodAnswer;
 	Q.innerHTML     = QAarray[QuestionNumber].Question;
 	A.innerHTML     = QAarray[QuestionNumber].AnswerA;
@@ -72,15 +75,21 @@ function InsertQuestion(QuestionNumber){
 //Answered? is it the right Then we gain points and continue to the next question
 function Answered(chosenAnswer){
 	if(chosenAnswer.id.toString() == rightAnswer){
-		tempScore += 1;
+	    tempScore += 1;
 	}else{
 		tempScore -= 1;
 	}
+	S.innerHTML = tempScore.toString();
 	NextQuestion();
 }
-
+// If there are no questions left
 function NoQuestionsLeft(){
 	QuizDiv= g("quizDiv");
 	QuizDiv.style.display = "none";
+	console.log(tempScore)
+	AddPoints(tempScore);
+	tempScore = 0;
+
+	HidePersonia();
 }
 
