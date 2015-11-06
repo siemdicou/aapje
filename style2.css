@@ -116,27 +116,48 @@ margin-left: 60%;
 	width: 20%;
 	font-size: 33px;
 }
-#pictures{
+.pictures{
 	border:3px solid;
 	width: 30%;
 	margin: 1%;
 	display: inline-table;
-	 box-shadow: 7px 7px 5px black;
+	box-shadow: 7px 7px 5px black;
 	
 }
-#pictures img{
+.pictures img{
 	width: 100%;
 	opacity: 0.2;
 	float: left;
+	/*position: inherit;*/
 	/*padding-bottom: -50%;*/
 }
-#koopButton{
+
+/*.pictures img button{
 	margin-left: 50%;
-	margin-right: 50%;
+	position: fixed;
+
+}*/
+.textKopen h3{
+	background-color: blue;
+	height: 33px;
+	width: 100%;
+	text-align: center;
+	display:inline-block;
+	padding-bottom: 10%;
+	margin-bottom: 0 ;
+	padding-top: 3%;
+	/*margin-left: 40%;*/
+	/*margin-right: 50%;*/
+}
+
+/*.pictures .koopButton{
+	margin:  2%40% ;
+	/*position:fixed;*/
+    /*background:blue;*/
+    /*color:#FFF;*/
+
 
 	/*float:left ;*/
-
-}
 
 /*@keyframes example {
     from {background-color: red;}
