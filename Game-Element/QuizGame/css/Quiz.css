@@ -13,10 +13,10 @@ body{
 	height:20px;
 	width:200px;
 	padding:50px 50px 50px 50px;
-	background-image:url(Images/flag.png);	
+	background-image:url(../Images/flag.png);	
 }
 #A:hover, #B:hover, #C:hover, #D:hover{
-	background-image:url(Images/flagHover.png);	
+	background-image:url(../Images/flagHover.png);	
 }
 #currentScore{
     float:left;
@@ -55,6 +55,9 @@ avatarField{
     right:50px;
     height:200px;
     width:200px;
+}
+#QuizProgress {
+    height:200px;
 }
 
 

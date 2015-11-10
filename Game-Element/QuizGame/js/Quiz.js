@@ -4,7 +4,16 @@ var rightAnswer;
 var chosenQuestions = [];
 var tempScore = 0;
 
+var CharacterX;
+var images = {};
+var context;
+var charX = 0;
+var totalResources = 1;
+var numResourcesLoaded = 0;
+var fps = 30;
+var speed = 300;
 
+//All the Questions from the array
 var QAarray = [
 	new QA(0,3,"You think you got this?","A", "I do...","No I don't","Potatoe"),
 	new QA(1,4,"Bring me to life?","B", "K?","Wake me up!","Bring me lives","Gimme something to work with"),
@@ -25,6 +34,12 @@ function QuizInit(){
 	C = g("C");
 	D = g("D");
 	S = g("currentScore");
+	loadImage("Heads/Head");
+	loadImage("Bodies/Body");
+	loadImage("Feets/Feet");
+    //context = document.getElementById("QuizProgress").getContext("2d");
+	g2d(context);
+
 	ShowPersonia();
 	NextQuestion();	
 	
@@ -37,7 +52,7 @@ function NextQuestion(){
 		InsertQuestion(RandomQuestionNmbr);
 		chosenQuestions.push(RandomQuestionNmbr);
 	}else if(chosenQuestions.length >= 5){
-		//Bonus Question?
+		//----Bonus Question?
 		NoQuestionsLeft();
 		
 
@@ -61,8 +76,6 @@ function NextQuestion(){
 }
 //Visual Adding of the Question and Answers to HTML
 function InsertQuestion(QuestionNumber){
-
-
 	rightAnswer      = QAarray[QuestionNumber].GoodAnswer;
 	Q.innerHTML     = QAarray[QuestionNumber].Question;
 	A.innerHTML     = QAarray[QuestionNumber].AnswerA;
@@ -77,9 +90,9 @@ function Answered(chosenAnswer){
 	if(chosenAnswer.id.toString() == rightAnswer){
 	    tempScore += 1;
 	}else{
-		tempScore -= 1;
+	    tempScore += 1;
 	}
-	S.innerHTML = tempScore.toString();
+	/*S.innerHTML = ;.toString();*/
 	NextQuestion();
 }
 // If there are no questions left
@@ -92,4 +105,44 @@ function NoQuestionsLeft(){
 
 	HidePersonia();
 }
+//checks Position from character and position it should stand
+function ScoreDefiner(positionXMultiplier) {
+    var x = positionXMultiplier * speed;
+    if (charX < x) {
+        charX += 10;
+
+    }
+
+}
+//Loads Targetimage that can be used
+function loadImage(name) {
+    images[name] = new Image();
+    images[name].onload = function () {
+        resourceLoaded();
+    }
+    images[name].src = "Images/" + name + ".png";
+ 
+}
+
+
+//The frames will move only when all images are loaded
+function resourceLoaded() {
+    numResourcesLoaded += 1;
+    if (numResourcesLoaded === totalResources) {
+        setInterval(redraw, 1000 / fps);
+    }
+}
+
+//draw the targetimages
+function redraw() {
+    var x = charX;
+
+    context.canvas.width = context.canvas.width;
+
+    context.drawImage(images["Feets/Feet"], x + 0, 0);
+    context.drawImage(images["Bodies/Body"], x + 0,0);
+    context.drawImage(images["Heads/Head"], x + 0,0);
+    ScoreDefiner(tempScore);
+}
+
 

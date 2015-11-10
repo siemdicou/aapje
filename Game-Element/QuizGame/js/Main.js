@@ -3,6 +3,11 @@ function g(x){
 	return temp;
 }
 
+function g2d(x) {
+    var temp = document.getElementById(x).getContext2D();
+    return temp;
+}
+
 
 function Start(){
 	InformationInit();
