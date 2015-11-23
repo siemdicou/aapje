@@ -3,11 +3,17 @@ var PersonalSpot, NameSpot, ScoreSpot, CurrentScoreSpot;
 var thisName, thisScore;
 var IMAGE_PATH = "Images/"
 var currentScore;
+
+var personaIsOn = 0;
 //Gets the personal information from the server
 function InformationInit(){
     thisPlayer = new PlayerInformation(0, "Chanisco", 101);
     CreatePersonalField();
 
+}
+
+function setPersona(g){
+    personaIsOn = g;
 }
 
 function SetInformation() {

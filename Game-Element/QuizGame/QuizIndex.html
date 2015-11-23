@@ -12,24 +12,32 @@
 
 </head>
 <body>
-<canvas id="QuizProgress" height="500" width="3780"> </canvas>
-<div id="PersonalInformation">
-	<div id="PersonalName"></div>
-	<div id="PersonalScore"></div>
-	<div id="PersonalCurrentScore"></div>
+<Quiz>
+    <canvas id="QuizProgress" height="500" width="3780"> </canvas>
+    <!---
+        <div id="PersonalInformation"> 
+	    <div id="PersonalName"></div>
+	    <div id="PersonalScore"></div>
+	    <div id="PersonalCurrentScore"></div>
 
-</div>
-<div id="quizDiv">
-	<div id="questionBox" height="200px">
-		<div id="Question"></div>
-	</div>
+    </div>--->
+    <div id="QuizDiv">
+        <div id="QuizScoreShow">
+            <div id="QuizTime">4:59</div>
+            <div id="QuizScore"></div>
+        </div>
+         <div id="QuestionBox">
+		    <div id="Question"></div>
+	    </div>
+        <div id="QuizEnding" style="display:none;"></div>
 
-	<div id="answerBox">
-		<div id="A" onClick="Answered(A)"></div>
-		<div id="B" onClick="Answered(B)"></div>
-		<div id="C" onClick="Answered(C)"></div>
-		<div id="D" onClick="Answered(D)"></div>
-	</div>
-</div>
+	    <div id="answerBox">
+		    <div id="A" onClick="Answered(A)"></div>
+		    <div id="B" onClick="Answered(B)"></div>
+		    <div id="C" onClick="Answered(C)"></div>
+		    <div id="D" onClick="Answered(D)"></div>
+	    </div>   
+    </div>
+</Quiz>
 </body>
 </html>

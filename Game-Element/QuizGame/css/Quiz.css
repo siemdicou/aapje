@@ -1,36 +1,81 @@
 @import url(https://fonts.googleapis.com/css?family=Bangers);
-body{
-}
-#questionBox{
-	background-color: #FF0;
+body{  
+    background-size: 1280px 720px;
+    background-image:url("../Images/NEC/BG/BG1.png");
+
 
 }
-#answerBox{
-	margin:0 0 0 25%;
+Quiz{
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-image:url("../Images/General/BannerBg1.png");
+    height:100%;
 }
+#QuizEnding{
+    height:320px;
+}
+.EndQuestion{
+    float:left;
+    width:248px;
+    height:26px;
+    font-family: 'Bangers', cursive;  
+    color:white;  
+    background-image:url(../Images//General/QuizEnd-Right.png);
+    padding:10px 10px 10px 50px;
+    margin:15px 15px 15px 15px;
+}
+.EndQuestion:hover{ 
+    background-image:url(../Images//General/QuizEnd-Hover.png);
+}
+
 #A, #B, #C, #D{
-    font-family: 'Bangers', cursive;    
-	height:20px;
-	width:200px;
-	padding:50px 50px 50px 50px;
-	background-image:url(../Images/flag.png);	
+    font-family: 'Bangers', cursive;  
+    color:white;  
+	height:50px;
+	width:450px;
+    padding:40px 10px 5px 150px;
+    background-repeat:no-repeat;
 }
-#A:hover, #B:hover, #C:hover, #D:hover{
-	background-image:url(../Images/flagHover.png);	
+#A{
+	background-image:url(../Images/NEC/AB/Idle/Btn1.png);	
+}
+#B{
+	background-image:url(../Images/NEC/AB/Idle/Btn2.png);	
+}
+#C{
+	background-image:url(../Images/NEC/AB/Idle/Btn3.png);	
+}
+#D{ 
+	background-image:url(../Images/NEC/AB/Idle/Btn4.png);	
+}
+#A:hover{
+	background-image:url(../Images/NEC/AB/Hover/Btn1.png);	
+
+} 
+#B:hover{
+	background-image:url(../Images/NEC/AB/Hover/Btn2.png);	
+
+} 
+#C:hover{
+	background-image:url(../Images/NEC/AB/Hover/Btn3.png);	
+
+}  
+#D:hover{
+	background-image:url(../Images/NEC/AB/Hover/Btn4.png);	
 }
 #currentScore{
-    float:left;
     font-size:100px;
 }
 #PersonalField {
-    -webkit-transition: all 0.5s ease-in-out;
-	-moz-transition:    all 0.5s ease-in-out;
-	-ms-transition:     all 0.5s ease-in-out;
-	-o-transition:        all 0.5s ease-in-out;
+    -webkit-transition:     all 0.5s ease-in-out;
+	-moz-transition:        all 0.5s ease-in-out;
+	-ms-transition:         all 0.5s ease-in-out;
+	-o-transition:          all 0.5s ease-in-out;
 	transition:             all 0.5s ease-in-out;
-    height:200px;
-    position: fixed;
-    left:0%;
+    height:                 200px;
+    position:               fixed;
+    left:                   0%;
     
     
 }
@@ -56,8 +101,59 @@ avatarField{
     height:200px;
     width:200px;
 }
+#QuizDiv{
+    width:1300px;
+}
+#QuizScoreShow{
+    font-family: 'Bangers', cursive; 
+    height:             360px;
+    width:              328px; 
+  /*  height:             142px;
+    width:              230px;
+    font-size:          50px;
+    color:              #FFFFFF;
+    padding:            170px 0px 50px 100px;*/
+    background-image:   url("../Images/General/Score-UI.png");
+    float:              left;
+
+}
+#QuizScore{
+    margin:120px 0px 0px 50px;
+    font-size:          50px;
+    color:              #FFFFFF;
+    height:10px;
+    width:100px;
+}
+#QuizTime{
+    margin:40px 0px 0px 150px;
+    font-size:          50px;
+    color:              #FFFFFF;
+    height:10px;
+    width:100px;
+
+}
 #QuizProgress {
-    height:200px;
+    position:relative;
+    height:190px;
+
+}
+
+#QuestionBox{
+    font-family: 'Bangers', cursive;  
+    height:70px;
+    width:730px;
+    padding:20px 20px 20px 200px;
+    float:left;
+    font-size:          40px;
+    color:              #FFFFFF;
+    background-repeat:no-repeat;
+    background-image:url("../Images/General/AB.png");
+
 }
 
 
+#answerBox{
+    float:left;
+    margin:0 0 0 170px;
+    background-repeat:no-repeat;
+}

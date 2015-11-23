@@ -1,11 +1,7 @@
 ﻿var el;
 var blanket;
-function PopInit() {
-    var blanket = g('blanket');
-
-}
 function toggle(div_id) {
-    var el = g(div_id);
+    var el = document.getElementById(div_id);
     if (el.style.display == 'none') {
         el.style.display = 'block';
     }
@@ -29,12 +25,12 @@ function blanket_size(popUpDivVar) {
             blanket_height = document.body.parentNode.scrollHeight;
         }
     }
-   // var blanket = document.getElementById('blanket');
+    var blanket = document.getElementById('blanket');
     blanket.style.height = blanket_height + 'px';
     var popUpDiv = document.getElementById(popUpDivVar);
     popUpDiv_height = blanket_height / 2 - 200;
-    popUpDiv.style.top = "100px";
-    popUpDiv.style.left = "250px";
+    popUpDiv.style.top = "10%";
+    popUpDiv.style.left = "10%";
 }
 
 function popup(windowname) {
